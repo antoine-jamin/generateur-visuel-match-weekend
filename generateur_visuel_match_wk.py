@@ -5,14 +5,15 @@ import locale
 
 locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
 
-# jours = ["VENDREDI","SAMEDI", "DIMANCHE"]
-jours = ["SAMEDI", "DIMANCHE"]
-salles_club = ["LIGERIA", "SALLE B", "ATHLÉTIS"]
+jours = ["JEUDI", "VENDREDI","SAMEDI", "DIMANCHE"]
+# jours = ["SAMEDI", "DIMANCHE"]
+salles_club = ["LIGERIA", "SALLE B", "ATHLÉTIS", "LIGERIA (CLUB HOUSE)"]
 salles_equipes_conventions = {'JEAN MONNET': ['S1F', 'S2F', 'S3F', 'U20F', 'U17F N', 'U17F D'],
+                              'JEAN LEHAY': ['S1F', 'S2F', 'S3F', 'U20F', 'U17F N', 'U17F D'],
                               'BELLE BEILLE': ['S1F', 'S2F', 'S3F', 'U20F', 'U17F N', 'U17F D'],
                               'MONTAIGNE': ['U15M']}
 
-date_jour1 = datetime.date(2022, 4, 9)
+date_jour1 = datetime.date(2022, 5, 19)
 
 xl_matchs = pd.read_excel('doc/template.xlsx').dropna().sort_values(by=['JOUR', 'HEURE'])
 
