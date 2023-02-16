@@ -13,7 +13,7 @@ salles_equipes_conventions = {'JEAN MONNET': ['S1F', 'S2F', 'S3F', 'S4F', 'U17F'
                               'BELLE BEILLE': ['S1F', 'S2F', 'S3F', 'S4F', 'U17F'],
                               'MONTAIGNE': ['U15M', 'U16M1']}
 
-date_jour1 = datetime.date(2022, 10, 22)
+date_jour1 = datetime.date(2023, 2, 4)
 
 xl_matchs = pd.read_excel('doc/template.xlsx').dropna().sort_values(by=['JOUR', 'HEURE'])
 
@@ -22,8 +22,11 @@ y = 200
 template_img = Image.open('doc/template.png')
 visuel = ImageDraw.Draw(template_img)
 font_jour = ImageFont.truetype("Chalkboard.ttc", 60)
+#font_jour = ImageFont.truetype("Chalkboard.ttc", 50)
 font_salle = ImageFont.truetype("Chalkboard.ttc", 45)
+#font_salle = ImageFont.truetype("Chalkboard.ttc", 40)
 font_match = ImageFont.truetype("Chalkboard.ttc", 40)
+#font_match = ImageFont.truetype("Chalkboard.ttc", 35)
 color_jour = (254, 253, 26, 255)
 color_salle_conv = (0, 176, 240, 255)
 color_salle_ext = (255, 11, 172, 255)
