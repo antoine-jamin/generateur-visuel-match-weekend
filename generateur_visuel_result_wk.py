@@ -1,11 +1,13 @@
 from utils import *
 
+xl_matchs = xl_matchs.sort_values(by=['EQUIPE'])
+
 template_img = Image.open('doc/template_resultats.png')
 visuel = ImageDraw.Draw(template_img)
 
 dateDeb = date_jour1
 dateFin = date_jour1 + datetime.timedelta(days=len(jours) - 1)
-msg = dateDeb.strftime("Weekend du %d au") + dateFin.strftime(" %d %B")
+msg = dateDeb.strftime("du %d au") + dateFin.strftime(" %d %B")
 w, h = visuel.textsize(msg, font_jour)
 visuel.text(((1080 - w) / 2, y), msg, font=font_jour, fill=color_jour, align='center', stroke_width=2,
             stroke_fill=color_jour)
